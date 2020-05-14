@@ -1,0 +1,35 @@
+{
+  "name": "evaluationangular",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "pm2-monit": "pm2-runtime start ecosystem.config.js --watch",
+    "watch": "tsc -w",
+    "serve": "concurrently \"npm run watch\" \"npm run pm2-monit\"\n"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/adminwr/evaluationAngular.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/adminwr/evaluationAngular/issues"
+  },
+  "homepage": "https://gitlab.com/adminwr/evaluationAngular#readme",
+  "devDependencies": {
+    "@types/cors": "^2.8.6",
+    "@types/express": "^4.17.2",
+    "@types/node": "^13.7.4",
+    "express": "^4.17.1",
+    "pm2": "^4.2.3",
+    "tslint": "^5.12.0",
+    "typescript": "^3.2.2"
+  },
+  "dependencies": {
+    "concurrently": "^5.1.0",
+    "cors": "^2.8.5",
+    "firebase-admin": "^8.9.2"
+  }
+}
