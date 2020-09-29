@@ -45,5 +45,3 @@ app.get('/api/patientsData', async (req, res) => {
 app.listen(3015, function () {
     console.log('API listening on http://localhost:3015/api/ !');
 });
-
-
