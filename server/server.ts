@@ -40,8 +40,7 @@ app.get('/api/patientsData', async (req, res) => {
     } catch (e) {
         return res.status(500).send({error: 'erreur serveur :' + e.message});
     }
-});
-
+})
 
 app.listen(3015, function () {
     console.log('API listening on http://localhost:3015/api/ !');
