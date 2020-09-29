@@ -41,6 +41,14 @@ app.get('/api/patientsData', async (req, res) => {
         return res.status(500).send({error: 'erreur serveur :' + e.message});
     }
 });
+app.get('/api/services', async (req, res) => {
+    try {
+        const patientsData = await getAllpatientData();
+        return res.send(patientsData);
+    } catch (e) {
+        return res.status(500).send({error: 'erreur serveur :' + e.message});
+    }
+});
 
 app.listen(3015, function () {
     console.log('API listening on http://localhost:3015/api/ !');
