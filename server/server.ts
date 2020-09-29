@@ -41,7 +41,7 @@ app.get('/api/patientsData', async (req, res) => {
         return res.status(500).send({error: 'erreur serveur :' + e.message});
     }
 });
-app.get('/api/service', async (req, res) => {
+app.get('/api/services', async (req, res) => {
     try {
         const patientsData = await getAllpatientData();
         return res.send(patientsData);
