@@ -1,0 +1,81 @@
+<!-- Title group  -->
+<!-- <div class="title-group">
+    <h2 class="mat-h2">Liste  des patients</h2>
+</div>
+
+<div class="list-users" >
+    <mat-form-field>
+        <input matInput  >
+        <button mat-button matSuffix mat-icon-button aria-label="clear" >
+            <mat-icon>close</mat-icon>
+        </button>
+      </mat-form-field>
+      [dataSource]="dataSource" -->
+    <!-- <table mat-table   class="mat-elevation-z8">
+        <ng-container matColumnDef="nom">
+            <th mat-header-cell > Nom </th>
+            <td mat-cell ></td>
+        </ng-container>
+        <ng-container>
+            <th mat-header-cell > Prenom </th>
+            <td mat-cell ></td>
+        </ng-container>
+        <ng-container >
+            <th mat-header-cell > N° appareil </th>
+            <td mat-cell ></td>
+        </ng-container>
+        <ng-container matColumnDef="email">
+            <th mat-header-cell > Email </th>
+            <td mat-cell ></td>
+        </ng-container>
+        <ng-container matColumnDef="roles">
+            <th mat-header-cell >Adresse</th>
+            <td mat-cell>
+               
+            </td>
+        </ng-container>
+        <ng-container >
+            <th></th>
+            <td>
+                <button mat-icon-button color="primary"><mat-icon>launch</mat-icon></button>
+                
+                <button> 
+                    <mat-icon>work_off</mat-icon></button>
+                
+                <button mat-icon-button color="primary">
+                    <mat-icon>work</mat-icon></button>
+                </td>
+        </ng-container>
+        <tr mat-header-row ></tr>
+        <tr mat-row ></tr>
+    </table>
+    <mat-paginator [pageSizeOptions]="[10, 8, 15]" showFirstLastButtons MatPaginatorIntl></mat-paginator>
+    <br><br>
+</div> --> 
+<!-- *matRowDef="let row; columns: displayedColumns;" -->
+
+<div class="col-md-12">
+    <div class="table-responsive">
+
+        <table mdbTable hover="true" class="table table-bordred table-striped">
+            <thead>
+              <tr>
+                <th *ngFor="let head of headElements" scope="col">{{head}} </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr mdbTableCol *ngFor="let patients of patients">
+                
+                <td>{{patients.id}}</td>
+                <td>{{patients.nom}}</td>
+                <td>{{patients.prenom}}</td>
+                <td><p data-placement="top"  ><button class="btn btn-primary btn-xs"  ><span class="glyphicon glyphicon-pencil"></span></button></p></td>
+                <td><p data-placement="top"  ><button class="btn btn-danger btn-xs" ><span class="glyphicon glyphicon-trash"></span></button></p></td>
+              </tr>
+            </tbody>
+          </table>
+
+        </div>
+        </div>
+
+
